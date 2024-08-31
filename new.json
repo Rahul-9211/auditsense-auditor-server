@@ -1,0 +1,190 @@
+{
+    "_id": {
+        "$oid": "643a7b958fe55acc161d2c22"
+    },
+    "ChecklistDatabaseID": "5225288005",
+    "ChecklistDatabaseType": "Network Audit",
+    "ChecklistDatabaseName": "Network - Standard 2022",
+    "ChecklistDatabaseVersion": "1.0",
+    "ChecklistDatabaseYear": "2022",
+    "Checklist": [
+        {
+            "ChecklistID": "5106403239",
+            "ChecklistDetail": [
+                {
+                    "Title": "Adobe Flash Player Unsupported Version Detection",
+                    "Severity": "Critical",
+                    "Tags": " ",
+                    "Description": "<p>There is at least one unsupported version of Adobe Flash Player installed on the remote Windows host. Lack of support implies that no new security patches for the product will be released by the vendor. As a result, it is likely to contain security vulnerabilities.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Remove the unsupported software.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:01:57 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "4450124520",
+            "ChecklistDetail": [
+                {
+                    "Title": "Google Chrome < 111.0.5563.110 Multiple Vulnerabilities",
+                    "Severity": "Critical",
+                    "Tags": " ",
+                    "Description": "<p>The version of Google Chrome installed on the remote Windows host is prior to 111.0.5563.110. It is, therefore, affected by multiple vulnerabilities as referenced in the 2023_03_stable-channel-update-for-desktop_21 advisory.</p><p>&nbsp;- Use after free in Passwords. (CVE-2023-1528)</p><p>&nbsp;- Out of bounds memory access in WebHID. (CVE-2023-1529)</p><p>&nbsp;- Use after free in PDF. (CVE-2023-1530)</p><p>&nbsp;- Use after free in ANGLE. (CVE-2023-1531)</p><p>&nbsp;- Out of bounds read in GPU Video. (CVE-2023-1532)</p><p>&nbsp;- Use after free in WebProtect. (CVE-2023-1533)</p><p>&nbsp;- Out of bounds read in ANGLE. (CVE-2023-1534)</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Upgrade to Google Chrome version 111.0.5563.110 or later.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:02:49 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "9038004390",
+            "ChecklistDetail": [
+                {
+                    "Title": "KB5022840: Windows 10 version 1809 / Windows Server 2019 Security Update (February 2023)",
+                    "Severity": "Critical",
+                    "Tags": " ",
+                    "Description": "<p>The remote Windows host is missing security update 5022840. It is, therefore, affected by multiple vulnerabilities</p><p>&nbsp;- Windows iSCSI Discovery Service Remote Code Execution Vulnerability (CVE-2023-21803)</p><p>&nbsp;- Microsoft PostScript Printer Driver Remote Code Execution Vulnerability (CVE-2023-21684, CVE-2023-21801)</p><p>&nbsp;- Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-21685, CVE-2023-21686, CVE-2023-21799)</p><p>Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Apply Security Update 5022840</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:03:28 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "7443470470",
+            "ChecklistDetail": [
+                {
+                    "Title": "Microsoft Forefront Endpoint Protection / System Center Endpoint Protection / Anti-malware Client Detection and Status",
+                    "Severity": "Critical",
+                    "Tags": " ",
+                    "Description": "<p>Microsoft Forefront Endpoint Protection, or another antimalware product from Microsoft, is installed on the remote host. However, there is a problem with the installation; either its services are not running or its engine and/or virus definitions are out of date.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Make sure that updates are working and the associated services are running.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:04:09 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "7412748490",
+            "ChecklistDetail": [
+                {
+                    "Title": "WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation (EnableCertPaddingCheck)",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>The remote system may be in a vulnerable state to CVE-2013-3900 due to a missing or misconfigured registry keys:<br>&nbsp; &nbsp;- HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck<br>&nbsp; &nbsp;- HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck<br>&nbsp; &nbsp;<br>An unauthenticated, remote attacker could exploit this, by sending specially crafted requests, to execute arbitrary code on an affected host.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Add and enable registry value EnableCertPaddingCheck:<br>&nbsp;- HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck</p><p>Additionally, on 64 Bit OS systems, Add and enable registry value EnableCertPaddingCheck:</p><p>&nbsp;- HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:04:55 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "5314640531",
+            "ChecklistDetail": [
+                {
+                    "Title": "Windows Defender Antimalware/Antivirus Signature Definition Check",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>Windows Defender has an AntiMalware/AntiVirus signature that gets updated continuously. The signature definition has not been updated in more than 1 day.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Trigger an update manually and/or enable auto-updates.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:05:31 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "1322377509",
+            "ChecklistDetail": [
+                {
+                    "Title": "SSL Medium Strength Cipher Suites Supported (SWEET32)",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>The remote host supports the use of SSL ciphers that offer medium strength encryption. Nessus regards medium strength as any encryption that uses key lengths at least 64 bits and less than 112 bits, or else that uses the 3DES encryption suite.</p><p>Note that it is considerably easier to circumvent medium strength encryption if the attacker is on the same physical network.</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Reconfigure the affected application if possible to avoid use of medium strength ciphers.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:06:14 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "9012709082",
+            "ChecklistDetail": [
+                {
+                    "Title": "Security Updates for Microsoft .NET Framework (February 2023)",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>The Microsoft .NET Framework installation on the remote host is missing a security update. It is, therefore, affected by multiple vulnerabilities, as follows:</p><p>&nbsp;- A denial of service (DoS) vulnerability. (CVE-2023-21722)</p><p>&nbsp;- A remote code execution vulnerability. (CVE-2023-21808)</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Microsoft has released security updates for Microsoft .NET Framework.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:06:48 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "8752312609",
+            "ChecklistDetail": [
+                {
+                    "Title": "Security Update for Forefront Endpoint Protection (June 2021)",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>The Malware Protection Engine version of Forefront Endpoint Protection installed on the remote Windows host is equal or prior to 1.1.17800.5. It is, therefore, affected by multiple vulnerabilities.</p><p>&nbsp;- A remote code execution vulnerability. An attacker can exploit this to bypass authentication and execute unauthorized arbitrary commands. (CVE-2021-31985)<br>&nbsp; &nbsp;<br>&nbsp;- A denial of service (DoS) vulnerability. An attacker can exploit this issue to cause the affected component to deny system or application services. (CVE-2021-31978)</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Enable automatic updates to update the malware engine for the relevant antimalware applications. Refer to Knowledge Base Article 2510781 for information on how to verify that MMPE has been updated.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:07:38 GMT"
+                }
+            ]
+        },
+        {
+            "ChecklistID": "1587432986",
+            "ChecklistDetail": [
+                {
+                    "Title": "MS09-035: Vulnerabilities in Visual Studio Active Template Library Could Allow Remote Code Execution (969706)",
+                    "Severity": "High",
+                    "Tags": " ",
+                    "Description": "<p>The remote Windows host contains a version of the Microsoft Active Template Library (ATL), included as part of Visual Studio or Visual C++, that is affected by multiple vulnerabilities :</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, an issue in the ATL headers could allow an attacker to force VariantClear to be called on a VARIANT that has not been correctly initialized and, by supplying a corrupt stream, to execute arbitrary code. (CVE-2009-0901)</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, unsafe usage of OleLoadFromStream could allow instantiation of arbitrary objects that can bypass related security policy, such as kill bits within Internet Explorer. (CVE-2009-2493)</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, an issue in the ATL headers could allow a string to be read without a terminating NULL character, which could lead to disclosure of information in memory. (CVE-2009-2495)</p>",
+                    "Impact": " ",
+                    "Remediation": "<p>Microsoft has released a set of patches for Visual Studio .NET 2003, Visual Studio 2005 and 2008, as well as Visual C++ 2005 and 2008.</p>",
+                    "Reference": " ",
+                    "Status": "Enabled",
+                    "ModifiedBy": "1224596639",
+                    "DateTime": "Tue, 11 Apr 2023 10:09:32 GMT"
+                }
+            ]
+        }
+    ],
+    "ModificationTimeline": [
+        {
+            "Status": "Enabled",
+            "ModifiedBy": "1224596639",
+            "DateTIme": "Sat, 15 Apr 2023 10:25:25 GMT"
+        }
+    ],
+    "__v": 0
+}

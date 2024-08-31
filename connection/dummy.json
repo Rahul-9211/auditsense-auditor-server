@@ -1,0 +1,36 @@
+{
+    "Assets": [
+        {
+            "IP": "34.201.86.77",
+            "Port": "3000",
+            "Protocol": "HTTP",
+            "State": "Active",
+            "Service": "SMTP",
+            "Version": "2.0"
+        },
+        {
+            "IP": "52.72.10.206",
+            "Port": "3000",
+            "Protocol": "HTTP",
+            "State": "Active",
+            "Service": "SMTP",
+            "Version": "2.0"
+        },
+        {
+            "IP": "35.173.84.186",
+            "Port": "3000",
+            "Protocol": "HTTP",
+            "State": "Active",
+            "Service": "SMTP",
+            "Version": "2.0"
+        },
+        {
+            "IP": "52.202.243.189",
+            "Port": "3000",
+            "Protocol": "HTTP",
+            "State": "Active",
+            "Service": "SMTP",
+            "Version": "2.0"
+        }
+    ]
+}

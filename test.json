@@ -1,0 +1,360 @@
+{
+  "_id": {
+    "$oid": "6434f56c0333e1eb7031dff7"
+  },
+  "ChecklistDatabaseID": "5592351525",
+  "ChecklistDatabaseType": "Network Audit",
+  "ChecklistDatabaseName": "Network - Standard 2023",
+  "ChecklistDatabaseVersion": "1.0",
+  "ChecklistDatabaseYear": "2023",
+  "Checklist": [
+    {
+      "ChecklistID": "5106403679",
+      "ChecklistDetail": [
+        {
+          "Title": "Adobe Flash Player Unsupported Version Detection",
+          "Severity": "Critical",
+          "Tags": " ",
+          "Description": "<p>There is at least one unsupported version of Adobe Flash Player installed on the remote Windows host. Lack of support implies that no new security patches for the product will be released by the vendor. As a result, it is likely to contain security vulnerabilities.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Remove the unsupported software.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:01:57 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "4450514520",
+      "ChecklistDetail": [
+        {
+          "Title": "Google Chrome < 111.0.5563.110 Multiple Vulnerabilities",
+          "Severity": "Critical",
+          "Tags": " ",
+          "Description": "<p>The version of Google Chrome installed on the remote Windows host is prior to 111.0.5563.110. It is, therefore, affected by multiple vulnerabilities as referenced in the 2023_03_stable-channel-update-for-desktop_21 advisory.</p><p>&nbsp;- Use after free in Passwords. (CVE-2023-1528)</p><p>&nbsp;- Out of bounds memory access in WebHID. (CVE-2023-1529)</p><p>&nbsp;- Use after free in PDF. (CVE-2023-1530)</p><p>&nbsp;- Use after free in ANGLE. (CVE-2023-1531)</p><p>&nbsp;- Out of bounds read in GPU Video. (CVE-2023-1532)</p><p>&nbsp;- Use after free in WebProtect. (CVE-2023-1533)</p><p>&nbsp;- Out of bounds read in ANGLE. (CVE-2023-1534)</p>",
+          "Impact": " ",
+          "Remediation": "<p>Upgrade to Google Chrome version 111.0.5563.110 or later.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:02:49 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "9038004990",
+      "ChecklistDetail": [
+        {
+          "Title": "KB5022840: Windows 10 version 1809 / Windows Server 2019 Security Update (February 2023)",
+          "Severity": "Critical",
+          "Tags": " ",
+          "Description": "<p>The remote Windows host is missing security update 5022840. It is, therefore, affected by multiple vulnerabilities</p><p>&nbsp;- Windows iSCSI Discovery Service Remote Code Execution Vulnerability (CVE-2023-21803)</p><p>&nbsp;- Microsoft PostScript Printer Driver Remote Code Execution Vulnerability (CVE-2023-21684, CVE-2023-21801)</p><p>&nbsp;- Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-21685, CVE-2023-21686, CVE-2023-21799)</p><p>Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Apply Security Update 5022840</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:03:28 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "7420470470",
+      "ChecklistDetail": [
+        {
+          "Title": "Microsoft Forefront Endpoint Protection / System Center Endpoint Protection / Anti-malware Client Detection and Status",
+          "Severity": "Critical",
+          "Tags": " ",
+          "Description": "<p>Microsoft Forefront Endpoint Protection, or another antimalware product from Microsoft, is installed on the remote host. However, there is a problem with the installation; either its services are not running or its engine and/or virus definitions are out of date.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Make sure that updates are working and the associated services are running.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:04:09 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "7489748490",
+      "ChecklistDetail": [
+        {
+          "Title": "WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation (EnableCertPaddingCheck)",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The remote system may be in a vulnerable state to CVE-2013-3900 due to a missing or misconfigured registry keys:<br>&nbsp; &nbsp;- HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck<br>&nbsp; &nbsp;- HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck<br>&nbsp; &nbsp;<br>An unauthenticated, remote attacker could exploit this, by sending specially crafted requests, to execute arbitrary code on an affected host.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Add and enable registry value EnableCertPaddingCheck:<br>&nbsp;- HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck</p><p>Additionally, on 64 Bit OS systems, Add and enable registry value EnableCertPaddingCheck:</p><p>&nbsp;- HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Cryptography\\Wintrust\\Config\\EnableCertPaddingCheck</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:04:55 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "5314590531",
+      "ChecklistDetail": [
+        {
+          "Title": "Windows Defender Antimalware/Antivirus Signature Definition Check",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>Windows Defender has an AntiMalware/AntiVirus signature that gets updated continuously. The signature definition has not been updated in more than 1 day.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Trigger an update manually and/or enable auto-updates.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:05:31 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "1324077509",
+      "ChecklistDetail": [
+        {
+          "Title": "SSL Medium Strength Cipher Suites Supported (SWEET32)",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The remote host supports the use of SSL ciphers that offer medium strength encryption. Nessus regards medium strength as any encryption that uses key lengths at least 64 bits and less than 112 bits, or else that uses the 3DES encryption suite.</p><p>Note that it is considerably easier to circumvent medium strength encryption if the attacker is on the same physical network.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Reconfigure the affected application if possible to avoid use of medium strength ciphers.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:06:14 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "9012707682",
+      "ChecklistDetail": [
+        {
+          "Title": "Security Updates for Microsoft .NET Framework (February 2023)",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The Microsoft .NET Framework installation on the remote host is missing a security update. It is, therefore, affected by multiple vulnerabilities, as follows:</p><p>&nbsp;- A denial of service (DoS) vulnerability. (CVE-2023-21722)</p><p>&nbsp;- A remote code execution vulnerability. (CVE-2023-21808)</p>",
+          "Impact": " ",
+          "Remediation": "<p>Microsoft has released security updates for Microsoft .NET Framework.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:06:48 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "8750512609",
+      "ChecklistDetail": [
+        {
+          "Title": "Security Update for Forefront Endpoint Protection (June 2021)",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The Malware Protection Engine version of Forefront Endpoint Protection installed on the remote Windows host is equal or prior to 1.1.17800.5. It is, therefore, affected by multiple vulnerabilities.</p><p>&nbsp;- A remote code execution vulnerability. An attacker can exploit this to bypass authentication and execute unauthorized arbitrary commands. (CVE-2021-31985)<br>&nbsp; &nbsp;<br>&nbsp;- A denial of service (DoS) vulnerability. An attacker can exploit this issue to cause the affected component to deny system or application services. (CVE-2021-31978)</p>",
+          "Impact": " ",
+          "Remediation": "<p>Enable automatic updates to update the malware engine for the relevant antimalware applications. Refer to Knowledge Base Article 2510781 for information on how to verify that MMPE has been updated.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:07:38 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "1587912986",
+      "ChecklistDetail": [
+        {
+          "Title": "MS09-035: Vulnerabilities in Visual Studio Active Template Library Could Allow Remote Code Execution (969706)",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The remote Windows host contains a version of the Microsoft Active Template Library (ATL), included as part of Visual Studio or Visual C++, that is affected by multiple vulnerabilities :</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, an issue in the ATL headers could allow an attacker to force VariantClear to be called on a VARIANT that has not been correctly initialized and, by supplying a corrupt stream, to execute arbitrary code. (CVE-2009-0901)</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, unsafe usage of OleLoadFromStream could allow instantiation of arbitrary objects that can bypass related security policy, such as kill bits within Internet Explorer. (CVE-2009-2493)</p><p>&nbsp;- On systems with components and controls installed that were built using Visual Studio ATL, an issue in the ATL headers could allow a string to be read without a terminating NULL character, which could lead to disclosure of information in memory. (CVE-2009-2495)</p>",
+          "Impact": " ",
+          "Remediation": "<p>Microsoft has released a set of patches for Visual Studio .NET 2003, Visual Studio 2005 and 2008, as well as Visual C++ 2005 and 2008.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:09:32 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "5148956070",
+      "ChecklistDetail": [
+        {
+          "Title": "Microsoft Windows Unquoted Service Path Enumeration",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>The remote Windows host has at least one service installed that uses an unquoted service path, which contains at least one whitespace. A local attacker can gain elevated privileges by inserting an executable file in the path of the affected service.</p><p>Note that this is a generic test that will flag any application affected by the described vulnerability.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Ensure that any services that contain a space in the path enclose the path in quotes.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:10:08 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "6279736450",
+      "ChecklistDetail": [
+        {
+          "Title": "Microsoft Malware Protection Engine Elevation of Privilege Vulnerability",
+          "Severity": "High",
+          "Tags": " ",
+          "Description": "<p>An elevation of privilege vulnerability exists in Microsoft Malware Protection Engine due to improper file handling. An authenticated, remote attacker can exploit this, to gain elevated privileges.</p>",
+          "Impact": " ",
+          "Remediation": "<p>See vendor advisory.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:11:27 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "3677542835",
+      "ChecklistDetail": [
+        {
+          "Title": "TLS Version 1.1 Protocol Deprecated",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The remote service accepts connections encrypted using TLS 1.1. TLS 1.1 lacks support for current and recommended cipher suites. Ciphers that support encryption before MAC computation, and authenticated encryption modes such as GCM cannot be used with TLS 1.1</p><p>As of March 31, 2020, Endpoints that are not enabled for TLS 1.2 and higher will no longer function properly with major web browsers and major vendors.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Enable support for TLS 1.2 and/or 1.3, and disable support for TLS 1.1.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:14:52 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "3993733897",
+      "ChecklistDetail": [
+        {
+          "Title": " TLS Version 1.0 Protocol Detection",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The remote service accepts connections encrypted using TLS 1.0. TLS 1.0 has a number of cryptographic design flaws. Modern implementations of TLS 1.0 mitigate these problems, but newer versions of TLS like 1.2 and 1.3 are designed against these flaws and should be used whenever possible.</p><p>As of March 31, 2020, Endpoints that aren't enabled for TLS 1.2 and higher will no longer function properly with major web browsers and major vendors.</p><p>PCI DSS v3.2 requires that TLS 1.0 be disabled entirely by June 30, 2018, except for POS POI terminals (and the SSL/TLS termination<br>points to which they connect) that can be verified as not being susceptible to any known exploits.</p>",
+          "Impact": " ",
+          "Remediation": "<p>Enable support for TLS 1.2 and 1.3, and disable support for TLS 1.0.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:30:41 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "4514436464",
+      "ChecklistDetail": [
+        {
+          "Title": "Windows Speculative Execution Configuration Check",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The remote host has not properly mitigated a series of known speculative execution vulnerabilities. It, therefore, may be affected by :<br>&nbsp;- Branch Target Injection (BTI) (CVE-2017-5715)<br>&nbsp;- Bounds Check Bypass (BCB) (CVE-2017-5753)<br>&nbsp;- Rogue Data Cache Load (RDCL) (CVE-2017-5754)<br>&nbsp;- Rogue System Register Read (RSRE) (CVE-2018-3640)<br>&nbsp;- Speculative Store Bypass (SSB) (CVE-2018-3639)<br>&nbsp;- L1 Terminal Fault (L1TF) (CVE-2018-3615, CVE-2018-3620, CVE-2018-3646)<br>&nbsp;- Microarchitectural Data Sampling Uncacheable Memory (MDSUM) (CVE-2019-11091)<br>&nbsp;- Microarchitectural Store Buffer Data Sampling (MSBDS) (CVE-2018-12126)<br>&nbsp;- Microarchitectural Load Port Data Sampling (MLPDS) (CVE-2018-12127)<br>&nbsp;- Microarchitectural Fill Buffer Data Sampling (MFBDS) (CVE-2018-12130)<br>&nbsp;- TSX Asynchronous Abort (TAA) (CVE-2019-11135)</p>",
+          "Impact": " ",
+          "Remediation": "<p>Apply vendor recommended settings.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:32:29 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "7437201336",
+      "ChecklistDetail": [
+        {
+          "Title": "Terminal Services Doesn't Use Network Level Authentication (NLA) Only",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The remote Terminal Services is not configured to use Network Level Authentication (NLA) only. NLA uses the Credential Security Support Provider (CredSSP) protocol to perform strong server authentication either through TLS/SSL or Kerberos mechanisms, which protect against man-in-the-middle attacks. In addition to improving authentication, &nbsp;NLA also helps protect the remote computer from malicious users and &nbsp;software by completing user authentication before a full RDP &nbsp;connection is established.<br>&nbsp;</p>",
+          "Impact": " ",
+          "Remediation": "<p>Enable Network Level Authentication (NLA) on the remote RDP server. This is generally done on the 'Remote' tab of the 'System' settings on Windows.<br>&nbsp;</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:33:53 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "1381977485",
+      "ChecklistDetail": [
+        {
+          "Title": "SSL Self-Signed Certificate",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The X.509 certificate chain for this service is not signed by a recognized certificate authority. &nbsp;If the remote host is a public host in production, this nullifies the use of SSL as anyone could establish a man-in-the-middle attack against the remote host.</p><p>Note that this plugin does not check for certificate chains that end in a certificate that is not self-signed, but is signed by an unrecognized certificate authority.<br>&nbsp;</p>",
+          "Impact": " ",
+          "Remediation": "<p>Purchase or generate a proper SSL certificate for this service.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:35:23 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "1185710356",
+      "ChecklistDetail": [
+        {
+          "Title": "Security Updates for Windows Defender (March 2023)",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The Malware Protection Engine version of Microsoft Windows Defender installed on the remote Windows host is prior to 1.1.20000.2. It is, therefore, affected by a privilege escalation vulnerability. An authenticated attacker can exploit this to gain elevated privileges.<br>&nbsp;</p>",
+          "Impact": " ",
+          "Remediation": "<p>Microsoft has released KB4052623 to address this issue.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:36:26 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "5166314993",
+      "ChecklistDetail": [
+        {
+          "Title": "Microsoft Windows LM / NTLMv1 Authentication Enabled",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The remote host is configured to attempt LM and/or NTLMv1 for outbound authentication. &nbsp;These protocols use weak encryption. &nbsp;A remote attacker &nbsp;who is able to read LM or NTLMv1 challenge and response packets could exploit this to get a user's LM or NTLM hash, which would allow an attacker to authenticate as that user.<br>&nbsp;</p>",
+          "Impact": " ",
+          "Remediation": "<p>Change the LmCompatibilityLevel setting to 3 or higher.</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:37:47 GMT"
+        }
+      ]
+    },
+    {
+      "ChecklistID": "9800832189",
+      "ChecklistDetail": [
+        {
+          "Title": "Curl Use-After-Free < 7.87 (CVE-2022-43552)",
+          "Severity": "Medium",
+          "Tags": " ",
+          "Description": "<p>The version of Curl installed on the remote host is prior to 7.87.0. It is therefore affected by a use-after-free vulnerability. Curl can be asked to tunnel virtually all protocols it supports through an HTTP proxy. HTTP proxies can (and often do) deny such tunnel operations. When getting denied to tunnel the specific protocols SMB or TELNET, curl would use a heap-allocated struct after it had been freed, in its transfer shutdown code path.</p><p>Note that Nessus has not tested for this issue but has instead relied only on the application's self-reported version number.<br>&nbsp;</p>",
+          "Impact": " ",
+          "Remediation": "<p>Upgrade Curl to version 7.87.0 or later</p>",
+          "Reference": " ",
+          "Status": "Enabled",
+          "ModifiedBy": "1224596639",
+          "DateTime": "Tue, 11 Apr 2023 10:41:31 GMT"
+        }
+      ]
+    }
+  ],
+  "ModificationTimeline": [
+    {
+      "Status": "Enabled",
+      "ModifiedBy": "1224596639",
+      "DateTIme": "Tue, 11 Apr 2023 05:51:40 GMT"
+    }
+  ],
+  "__v": 0
+}

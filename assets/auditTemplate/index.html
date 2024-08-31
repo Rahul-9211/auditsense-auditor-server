@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body_template_class">
+        <div class="content_heading" id="term_defination_legends">4. Terms, Definition & Legends
+            <div class="content mt-3">
+                <p>This section describes the format in which the identified vulnerabilities are reported in the later
+                    section of the report. “Vulnerability Table” shown below is used to provide the details of the
+                    vulnerability, its impact and the recommendations.
+                </p>
+                <div class="sub_content_heading" id="summary">4.1 Vulnerability Table
+                    <div class="content">
+                        <table class="table table-bordered mt-2" style="border-color:black;">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" class="content_table_white">1. Title of the Vulnerability</td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Risk Level</td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content_table_white">Description</td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Impact
+                                    </td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Recommendations</td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Affects</td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Status</td>
+                                    <td class="content_table_white"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="content mt-2">
+                        <table class="table table-borderless mt-2" style="border-color:black;">
+                            <tbody>
+                                <tr>
+                                    <td class="content_table_white" width="30%">Title of the Vulnerability</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">A short title that describes the vulnerability</td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Risk Level</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">It describes the risk level. The title bar of each
+                                        vulnerability table is colour
+                                        coded for quick identifications of the severity level of the vulnerabilities
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content_table_white">Description</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">It provides a brief description of the
+                                        vulnerability.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Impact
+                                    </td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">Describes the probable impact if the vulnerability
+                                        is
+                                        successfully exploited.</td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Recommendations</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">Provide the recommendations to fix the
+                                        vulnerability.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Affects</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">Provide the information where vulnerability is
+                                        present.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content_table_white">Status</td>
+                                    <td class="content_table_white">-</td>
+                                    <td class="content_table_white">Provides the information whether the vulnerability
+                                        is
+                                        closed or not.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sub_content_heading">4.2 Findings Ranking System
+                    <div class="content mt-3">
+                        <p>In order to prioritize the assessment results, each finding was categorized based on severity
+                            classifications. Final analysis of the risk or impact to the application will require an
+                            internal evaluation. Xiarch Labs has developed classifications using the severity
+                            nomenclature for ranking the issues identified within the various severity categories.
+                        </p>
+                        <div class="sub_sub_content_heading">4.2.1 Severity Categories
+                            <div class="content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_template_class">
+        <div class="content_heading" id="assessment_findings_details"></div>
+        <div class="">
+            <table class="table table-bordered mt-4" style="border-color:black;">
+
+                <tbody>
+                    <tr class="bg-sky-blue">
+                        <td colspan="2" class="content_table_white fw-bold">${get_vulberability_table_title_count() }
+                            ${data.Title}</td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle fw-bold" width="15%">Risk Level</td>
+                        <td class="content_table_white align-middle text-dark fw-normal ${data.Severity === "
+                            Informational" ? "bg-info" : data.Severity==="Critical" ? "bg-critical" :
+                            data.Severity==="High" ? "bg-danger" : data.Severity==="Medium" ? "bg-warning"
+                            : "bg-success" }">${data.Severity}</td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle" colspan="2"><strong class="fw-bold">Description :
+                            </strong> ${data.Description}</td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle" colspan="2"><strong class="fw-bold">Impact :
+                            </strong> ${data.Impact}</td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle" colspan="2"><strong class="fw-bold">Remediation :
+                            </strong> ${data.Remediation}</td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle" colspan="2"><strong class="fw-bold">Affects :
+                            </strong> ${data.Affects}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content_table_white align-middle fw-bold">Status</td>
+                        <td class="content_table_white align-middle fw-normal ${data.VulnerabilityStatus === " Open"
+                            ? "text-danger" : data.VulnerabilityStatus==="Closed" ? "text-success" : "text-dark" } " >${data.VulnerabilityStatus}</td>
+            </tr>
+        </tbody>
+
+
+              
+            </table>
+    </div>
+    </div> 
+</body>
+
+</html>

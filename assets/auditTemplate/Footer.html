@@ -1,0 +1,93 @@
+<div class="body_template_class">
+    <div class="content_heading" id="">
+        <h4 class="content_heading" id="assessment_findings_details">8. Assessment Findings Details</h4>
+    </div>
+    <div class="">
+        <table class="table table-bordered mt-4" style="border-color:black;">
+            <tbody>
+                <tr class="">
+
+                    <td colspan="2" style="background-color:#E0E0E0;" class="content_table_white align-middle fw-bold">
+                        Observation ID & Title :</td>
+                    <td colspan="2" class="p-2">
+
+                        <h3 class="content_table_white vulnerability_dynamic_table_heading fw-bold" style="margin : 0px"
+                            id="">8.1 ${reportData.ReportDetails.AuditDetails[0].Title}</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" width="25%" style="background-color:#E0E0E0;">
+                        CVSS Risk Rating :</td>
+                    <td width="25%"
+                        class="content_table_white align-middle text-light fw-bold ${reportData.ReportDetails.AuditDetails[0].Severity === "
+                        Informational" ? "bg-info" : reportData.ReportDetails.AuditDetails[0].Severity==="Critical"
+                        ? "bg-critical" : reportData.ReportDetails.AuditDetails[0].Severity==="High" ? "bg-danger" :
+                        reportData.ReportDetails.AuditDetails[0].Severity==="Medium" ? "bg-warning" : "bg-success" }">
+                        ${reportData.ReportDetails.AuditDetails[0].Severity}</td>
+                    <td width="25%" class="content_table_white align-middle fw-bold" style="background-color:#E0E0E0;">
+                        Status : </td>
+                    <td width="25%"
+                        class="content_table_white align-middle fw-bold ${reportData.ReportDetails.AuditDetails[0].Status === "
+                        Open" ? "bg-danger" : reportData.ReportDetails.AuditDetails[0].Status==="Closed" ? "bg-success"
+                        : "bg-dark" } "  style=" color:white;">${reportData.ReportDetails.AuditDetails[0].Status}</td>
+                </tr>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" colspan="4" style="background-color:#E0E0E0;">
+                        Observation Details :</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle" colspan="4">
+                        ${reportData.ReportDetails.AuditDetails[0].Description}</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" colspan="4" style="background-color:#E0E0E0;">
+                        Risk/Impact :</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle" colspan="4">
+                        ${reportData.ReportDetails.AuditDetails[0].Impact}</td>
+                </tr>
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" colspan="4" style="background-color:#E0E0E0;">
+                        Recommendations :</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle" colspan="4">
+                        ${reportData.ReportDetails.AuditDetails[0].Remediation}</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" colspan="4" style="background-color:#E0E0E0;">
+                        Affected URL & Parameter :</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle" colspan="4">
+                        ${reportData.ReportDetails.AuditDetails[0].Affects}</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle fw-bold" colspan="4" style="background-color:#E0E0E0;">
+                        CVSS Vector :</td>
+                </tr>
+
+                <tr>
+                    <td class="content_table_white align-middle" colspan="4">
+                        ${reportData.ReportDetails.AuditDetails[0].CVSS_Vector}</td>
+                </tr>
+
+            </tbody>
+        </table>
+        ${reportData.ReportDetails.AuditDetails[0].Status === "Closed" ?
+        print_all_vulnerability_POC(reportData.ReportDetails.AuditDetails[0].POC) : ""}
+        ${reportData.ReportDetails.AuditDetails[0].Status === "Open" ?
+        print_all_vulnerability_POC(reportData.ReportDetails.AuditDetails[0].POC) : ""}
+    </div>
+</div>
